@@ -126,3 +126,62 @@ print(company.indexOf("soft"));
 // 5
 ```
 
+- `.contains()` checks if a string is present within in a string.
+
+```dart
+String a = "This is a string";
+print(a.contains("is"));
+// true
+```
+
+### String Concatenation
+
+Strings could be concatenated in Dart using `+` operator.
+
+```dart
+String a = "Bro";
+String b = "ther";
+
+print(a + b);
+// Brother
+```
+
+## Math
+
+It's common to use *libraries*, for the use of specific functions. For math related functions, the library `math`.
+
+```dart
+import "dart:math";
+
+void main() {
+    print(max(10, 2));
+}
+```
+
+## Input
+
+The library associated with inputs is `io`.
+
+```dart
+import "dart:io";
+
+void main() {
+    print("How high can you jump?: ");
+    String height = stdin.readLineSync();
+}
+```
+
+### Number inputs
+
+While taking number inputs, the inputs are taken as `Strings` and not as `number`. Hence, it is required to parse the `String` into `number`.
+
+```dart
+String num = stdin.readLineSync();
+
+print(int.parse(num));
+// Parse as Integer
+
+print(double)
+// Parse as Double
+```
+
