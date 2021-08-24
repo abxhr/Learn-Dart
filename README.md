@@ -27,7 +27,10 @@ While working with programming languages, it's essential that you "*store*" the 
 
 ```dart
 void main() {
-    // I'm a comment, and the computer is going to ignore me :'(
+    // I'm a single-line comment, and the computer is going to ignore me :'(
+    /* I'm a multi-line comment,
+    and the computer is going to ignore me too :'(
+    */
 
     int numberOfStones = 6;
     String name = "Thanos";
@@ -271,4 +274,108 @@ void main() {
 ```
 
 ## If Statement
+
+`If` statements are used to execute a code block, if a given condition evaluates to be `true`.
+
+```dart
+if (num1 > num2) {
+    print("Number 1 is greater than number 2!");
+}
+else {
+    print("Number 1 is not greater than number 2!");
+}
+```
+
+### And/Or
+
+To combine conditons, `&&` or `||` operators could be used.
+
+```dart
+if ((num1 > num2) && (num1 > num3)) {
+    print("Number 1 is greater than number 2 and 3");
+}
+
+if ((num1 > num2) || (num1 > num3)) {
+    print("Number 1 is greater than number 2 or 3");
+}
+```
+
+- `!` is used to negate a result
+```dart
+bool result = 5 > 3;
+print(!result);
+// false
+```
+
+### Else if
+
+```dart
+if (num1 > num2) {
+    print("Number 1 is greater than number 2!");
+}
+else if (num1 > num3) {
+    print("Number 1 is greater than number 3!");
+}
+```
+
+## Switch Statement
+
+The switch statement evaluates an expression, matches the expression’s value to a case clause and executes the statements associated with that case.
+
+```dart
+String a = stdin.readLineSync();
+switch(a){
+    case '+':
+        print("You entered +");
+        break;
+    case '-':
+        print("You entered -");
+        break;
+    default:
+        print("Invalid!");
+}
+```
+
+## Loops!
+
+### While Loop
+
+The while loop executes the instructions each time the condition specified evaluates to true.
+
+```dart
+i = 0
+while (i < 3) {
+    print(i);
+    i++;
+}
+```
+
+### For Loop
+
+The for loop executes the code block for a specified number of times.
+
+```dart
+for(int i = 0; i < 3; i++){
+    print(i);
+}
+
+// 0
+// 1
+// 2
+```
+
+The for loop also could be used to iterate through a fixed set of values (*such as a list*).
+
+```dart
+String stones = ["space", "mind", "reality", "power", "time", "soul"];
+for(String stone in stones) {
+    print(stone);
+}
+// space
+// mind
+// reality
+// power
+// time
+// soul
+```
 
