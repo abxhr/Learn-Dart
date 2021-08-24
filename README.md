@@ -185,3 +185,90 @@ print(double)
 // Parse as Double
 ```
 
+## Lists
+
+A list is simply an ordered group of objects.
+
+```dart
+List<String> names = ["Harry", "Ron", "Harmoine"];
+print(names);
+// [Harry, Ron, Harmoine]
+
+print(names[1]);
+// Ron
+```
+
+### Adding Elements to list
+
+To add elements to a list, you could use the `.add()` function.
+
+```dart
+List<String> names = ["Harry", "Ron", "Harmoine"];
+names.add("Malfoy");
+
+print(names);
+// [Harry, Ron, Harmoine, Malfoy]
+```
+
+### Removing Elements from list
+
+To remove elements from a list, you could use the `.remove()` function.
+
+```dart
+List<String> names = ["Harry", "Ron", "Harmoine", "Malfoy"];
+names.remove("Malfoy");
+
+print(names);
+// [Harry, Ron, Harmoine]
+```
+
+## Functions
+
+Functions are the building blocks of readable, maintainable, and reusable code. A function is a set of statements to perform a specific task.
+
+```dart
+void myFunc() {
+    print("Hello!");
+}
+
+void main() {
+    myFunc();
+    myFunc();
+
+    // Hello!
+    // Hello!
+}
+```
+
+### Parameters
+
+The parameters are essentially the (names of) values that you could pass onto a function.
+
+```dart
+void myFunc(String name) {
+    print("Hello, ${name}!");
+}
+
+void main() {
+    myFunc("Elon");
+    // Hello, Elon!
+}
+```
+
+### Return
+
+To *return* a value from a function, we use the `return` statement.
+
+```dart
+int square(int num) {
+    return num * num;
+}
+
+void main() {
+    print(square(6));
+    // 36
+}
+```
+
+## If Statement
+
