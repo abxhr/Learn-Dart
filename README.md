@@ -379,3 +379,80 @@ for(String stone in stones) {
 // soul
 ```
 
+## Classes
+
+Dart is an object-oriented language. It supports object-oriented programming features like classes, interfaces, etc. 
+
+A class in terms of OOP is a blueprint for creating objects. A class encapsulates data for the object. Dart gives built-in support for this concept called `class`.
+
+```dart
+class Car {
+    String name;
+    int year;
+    String type;
+}
+
+void main() {
+    Car ferrari = Car();
+    ferrari.name = "LaFerrari";
+    ferrari.year = 2018;
+    ferrari.type= "Sport";
+
+    print(ferrari.year);
+    // 2018
+}
+```
+
+### Constructor
+
+*Constructors* are functions used to initialize the object values with data.
+
+```dart
+class Car {
+    String name;
+    int year;
+    String type;
+
+    Car(String name, int year, String type){
+        this.name = name;
+        this.year = year;
+        this.type = type;
+    }
+}
+
+void main() {
+    Car ferrari = Car("LaFerrari", 2018, "Sport");
+
+    print(ferrari.name);
+    // LaFerrari
+}
+```
+
+### Class Methods
+
+Classes could also have its own functions, called as `methods`.
+
+```dart
+class Car {
+    String name;
+    int year;
+    String type;
+
+    Car(String name, int year, String type){
+        this.name = name;
+        this.year = year;
+        this.type = type;
+    }
+
+    bool isFast(){
+        return this.name == "LaFerrari";
+    }
+}
+
+void main() {
+    Car ferrari = Car("LaFerrari", 2018, "Sport");
+
+    print(ferrari.isFast());
+    // true
+}
+```
